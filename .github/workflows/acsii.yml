@@ -10,21 +10,21 @@ jobs:
               uses: actions/checkout@v4
             
             - name: Install cowsay repo
-              uses: sudo apt-get install cowsay -y
+              run: sudo apt-get install cowsay -y
 
             - name: Execute cowsay CMD
-              uses: cowsay -f dolphin "AM coming in hot" >> df.txt
+              run: cowsay -f dolphin "AM coming in hot" >> df.txt
             
             - name: tests if the file is there
-              uses: grep -i "dolphin" df.txt
+              run: grep -i "dolphin" df.txt
 
             - name: read the file 
-              uses: cat df.txt
+              run: cat df.txt
 
             - name: Checkout Repo files
-              uses: ls -ltr
+              run: ls -ltr
 
             - name: echo something
-              uses: echo "what the heck is that"
+              run: echo "what the heck is that"
 
               #
