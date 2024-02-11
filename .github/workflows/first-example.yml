@@ -1,25 +1,25 @@
-name: My first Workflow
+# name: My first Workflow
 
-on: push
+# on: push
 
-jobs:
-    first_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checksout repo
-              uses: actions/checkout@v4
+# jobs:
+#     first_job:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: checksout repo
+#               uses: actions/checkout@v4
 
-            - name: Welcome message
-              run: |
-                echo "my first gti hbi act"
-                echo "who's the man" > retro.txt
-                cat retro.txt
-                ls -ltra
-                cat README.md
+#             - name: Welcome message
+#               run: |
+#                 echo "my first gti hbi act"
+#                 echo "who's the man" > retro.txt
+#                 cat retro.txt
+#                 ls -ltra
+#                 cat README.md
 
 
-            # - name: List Files 
-            #   run: ls -a
+#             # - name: List Files 
+#             #   run: ls -a
             
-            # - name: Read files 
-            #   run: cat README.md
+#             # - name: Read files 
+#             #   run: cat README.md
