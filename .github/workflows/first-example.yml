@@ -13,7 +13,7 @@ jobs:
               run: echo "my first gti hbi act"
 
             - name: List Files 
-              run: ls
+              run: ls -a
             
             - name: Read files 
               run: cat README.md
