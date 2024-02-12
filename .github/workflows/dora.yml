@@ -7,17 +7,24 @@ jobs:
             - name: apt install
               run: sudo apt-get install  cowsay -y
 
-    second-job: 
-        needs: first-job
-        runs-on: ubuntu-latest
-        steps:
             - name: ascii generate
               run: cowsay -f dragon "AM coming in hot" >> dragon.txt
 
+            - name: upload the file
+              uses: actions/upload-artifact@v4
+              with:
+                name: upload it
+                path: dragon.txt
+
     third-job:
-        needs: second-job
+        needs: first-job
         runs-on: ubuntu-latest
         steps:
+            - name: download the file
+              uses: actions/download-artifact@v4
+              with:
+                name: download it
+
             - name: display ascii
               run: |
                 ls -ltra
