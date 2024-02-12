@@ -8,23 +8,11 @@ jobs:
         steps:
             - name: checksout repo
               uses: actions/checkout@v4
+
+            - name: List the repo files
+              run: ls -ltra
             
-            - name: Install cowsay repo
-              run: sudo apt-get install cowsay -y
+            - name: Initiaite the shell script 
+              run: ./ascii-script.sh
 
-            - name: Execute cowsay CMD
-              run: cowsay -f dragon "AM coming in hot" >> dragon.txt
             
-            # - name: tests if the file is there
-            #   run: grep -i "dragon" dragon.txt
-
-            - name: read the file 
-              run: cat dragon.txt
-
-            - name: Checkout Repo files
-              run: ls -ltr
-
-            - name: echo something
-              run: echo "what the heck is that"
-
-              #
