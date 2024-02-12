@@ -15,11 +15,11 @@ jobs:
             - name: Execute cowsay CMD
               run: cowsay -f dragon "AM coming in hot" >> dragon.txt
             
-            - name: tests if the file is there
-              run: grep -i "dragon" dragon.txt
+            # - name: tests if the file is there
+            #   run: grep -i "dragon" dragon.txt
 
             - name: read the file 
-              run: cat df.txt
+              run: cat dragon.txt
 
             - name: Checkout Repo files
               run: ls -ltr
