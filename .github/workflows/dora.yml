@@ -1,0 +1,24 @@
+name: Prodesparate
+on: push
+jobs:
+    first-job: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: apt install
+              run: sudo apt-get install  cowsay -y
+
+    second-job: 
+        needs: first-job
+        runs-on: ubuntu-latest
+        steps:
+            - name: ascii generate
+              run: cowsay -f dragon "AM coming in hot" >> dragon.txt
+
+    third-job:
+        needs: second-job
+        runs-on: ubuntu-latest
+        steps:
+            - name: display ascii
+              run: |
+                ls -ltra
+                cat dragon.txt
