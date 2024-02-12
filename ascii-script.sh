@@ -8,5 +8,5 @@ cat dragon.txt
 
 ls -ltr
 
-echo "ooooooooooooooo===============oooooooooooooooooooooo
+echo "ooooooooooooooo===============oooooooooooooooooooooo"
 
